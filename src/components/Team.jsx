@@ -19,8 +19,8 @@ const Team = () => {
     setCurrentIndex(currentIndex + 1);
   };
   return (
-    <div className="pb-24">
-      <div className="section pt-44" id="team">
+    <div id="team">
+      <div className="section pt-44">
         <div className="grid xl:grid-cols-4 xl:px-16 lg:px-32 md:grid-cols-2 place-items-center gap-28">
           {teamMembers.map((item, i) => {
             return <TeamCard key={i} {...item} />;
@@ -72,7 +72,7 @@ const Team = () => {
             </p>
           </div>
         </div>
-        <div className="w-full rounded-l-full absolute text-start content-center -z-10 pl-60">
+        <div className="w-[70vw] rounded-l-full absolute text-start right-0 content-center -z-10">
           <div className="md:h-[500px] bg-[#F1F0FE] rounded-l-full"></div>
         </div>
       </div>

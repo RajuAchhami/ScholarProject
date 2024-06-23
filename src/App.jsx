@@ -4,6 +4,9 @@ import Home from "./components/Home";
 import Courses from "./components/Courses";
 import Services from "./components/Services";
 import Team from "./components/Team";
+import Events from "./components/Events";
+import Register from "./components/Register";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -13,6 +16,9 @@ const App = () => {
       <Services />
       <Courses />
       <Team />
+      <Events />
+      <Register />
+      <Footer />
     </div>
   );
 };

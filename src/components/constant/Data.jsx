@@ -14,6 +14,9 @@ import Team1 from "../../assets/Team01.jpg";
 import Team2 from "../../assets/Team02.jpg";
 import Team3 from "../../assets/Team03.jpg";
 import Team4 from "../../assets/Team04.jpg";
+import Event1 from "../../assets/Event01.jpg";
+import Event2 from "../../assets/Event02.jpg";
+import Event3 from "../../assets/Event03.png";
 
 export {
   Course1,
@@ -32,6 +35,9 @@ export {
   Team2,
   Team3,
   Team4,
+  Event1,
+  Event2,
+  Event3,
 };
 
 export const navLinks = [
@@ -230,5 +236,32 @@ export const teamMembers = [
     profile: Team2,
     designation: "Digital Animator",
     desc: "Scholar is free website template provided by TemplateMo for educational realted websites.This CSS layout is based on Bootstrap v5.3.0 framework",
+  },
+];
+
+export const eventsItems = [
+  {
+    category: "Web Design",
+    title: "UI Best Practices",
+    date: "16 feb 2024",
+    duration: "22 Hours ",
+    price: "$120",
+    image: Event1,
+  },
+  {
+    category: "Front End",
+    title: "New Design Trend",
+    date: "24 feb 2024",
+    duration: "20 Hours",
+    price: "$320",
+    image: Event2,
+  },
+  {
+    category: "Full Stack",
+    title: "Web Programming",
+    date: "29 feb 2024",
+    duration: "48 Hours ",
+    price: "$440",
+    image: Event3,
   },
 ];

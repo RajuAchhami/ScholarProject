@@ -1,9 +1,8 @@
 import React from "react";
-import { Course1 } from "../constant/Data";
 
 const CourseCard = ({ title, aurthor, price, category, image }) => {
   return (
-    <div className=" group max-w-[355px] bg-[#F1F0FE] relative rounded-3xl overflow-hidden">
+    <div className="select-none group max-w-[355px] bg-[#F1F0FE] relative rounded-3xl overflow-hidden">
       <h1 className="absolute top-8 left-6 bg-white px-3 py-2 rounded-full text-sm font-medium text-[#7a6ad8]">
         {category}
       </h1>

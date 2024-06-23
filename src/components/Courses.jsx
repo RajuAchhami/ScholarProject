@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import CourseCard from "./cards/CourseCard";
 import {
   LatestCourseCategory,
@@ -7,12 +7,27 @@ import {
 } from "./constant/Data";
 
 const Courses = () => {
+  const [data, setData] = useState(latestCourseItems);
+
+  const handleClick = (item) => {
+    if (!item || !item.title) return;
+    const newFilterText = item.title.toUpperCase();
+    console.log(item.title);
+
+    if (newFilterText === "SHOW ALL") {
+      setData(latestCourseItems);
+    } else {
+      setData(
+        latestCourseItems.filter(
+          (latestCourseItems) =>
+            latestCourseItems.category.toUpperCase() === newFilterText
+        )
+      );
+    }
+  };
   return (
-    <div>
-      <div
-        className="section py-24 flex flex-col items-center gap-14"
-        id="courses"
-      >
+    <div id="courses">
+      <div className="section py-24 flex flex-col items-center gap-14">
         <div className="flex flex-col gap-4">
           <h1 className="text-center text-[#7a6ad8] font-semibold">
             Latest Courses
@@ -25,6 +40,9 @@ const Courses = () => {
               <button
                 className="inline-block font-medium hover:text-[#7a6ad8] duration-200"
                 key={i}
+                onClick={() => {
+                  handleClick(item);
+                }}
               >
                 {item.title}
               </button>
@@ -33,7 +51,7 @@ const Courses = () => {
         </div>
 
         <div className="grid xl:grid-cols-3 md:grid-cols-2 place-items-center gap-8 lg:gap-14 lg:px-16 xl:px-10">
-          {latestCourseItems.map((item, i) => {
+          {data.map((item, i) => {
             return <CourseCard key={i} {...item} />;
           })}
         </div>
