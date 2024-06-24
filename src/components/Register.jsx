@@ -62,10 +62,10 @@ const Register = () => {
           </div>
         </div>
 
-        <div className="w-ful bg-[url('/Background1.jpg')] rounded-3xl bg-cover bg-center flex flex-col gap-4 items-center justify-center py-14 ">
+        <div className="w-full bg-[url('/Background1.jpg')] rounded-3xl bg-cover bg-center flex flex-col gap-4 items-center justify-center py-14 ">
           <form
             onSubmit={onSubmit}
-            className="flex flex-col content-center justify-center gap-5 md:w-full max-md:max-w-72 md:px-16  "
+            className="flex flex-col content-center justify-center gap-5 w-full  lg:px-16 md:px-12 max-md:px-2"
           >
             <input
               className="bg-[#FFFFFF1A] placeholder:text-[#ffffff] placeholder:text-sm rounded-full px-4 py-4 text-white outline-none "
