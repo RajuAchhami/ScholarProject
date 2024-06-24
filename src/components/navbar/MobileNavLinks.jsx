@@ -10,7 +10,7 @@ const MobileNavLinks = ({ setToggle, link, href }) => {
         spy={true}
         smooth={true}
         duration={500}
-        offset={-10}
+        offset={-20}
         onClick={(prev) => setToggle(!prev)}
       >
         {link}

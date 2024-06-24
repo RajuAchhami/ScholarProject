@@ -7,6 +7,7 @@ import Team from "./components/Team";
 import Events from "./components/Events";
 import Register from "./components/Register";
 import Footer from "./components/Footer";
+import Sample from "./components/Sample";
 
 const App = () => {
   return (

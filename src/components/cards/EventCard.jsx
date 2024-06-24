@@ -4,7 +4,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const EventCard = ({ category, title, date, duration, price, image }) => {
   return (
-    <div className="min-h-40 bg-[#F1F0FE] rounded-3xl flex max-lg:flex-col items-center justify-center relative lg:pl-36 max-lg:py-8 max-lg:gap-6">
+    <div className="min-h-40 bg-[#F1F0FE] rounded-3xl flex max-lg:flex-col items-center justify-center relative xl:pl-36 lg:pl-40 max-lg:py-8 max-lg:gap-6">
       <div
         className="absolute size-48 max-lg:size-60 max-lg:-top-14 lg:left-10 bg-cover bg-center rounded-3xl"
         style={{ backgroundImage: `url(${image})` }}
@@ -13,7 +13,7 @@ const EventCard = ({ category, title, date, duration, price, image }) => {
         <IoIosArrowForward />
       </button>
       <div className="lg:flex max-lg:pt-48">
-        <div className="max-lg:pb-6 lg:w-80">
+        <div className="max-lg:pb-6 xl:w-80 lg:w-64">
           <h1 className="font-medium bg-white text-[#7a6ad8] inline-block px-4 py-1 rounded-full uppercase mb-4">
             {category}
           </h1>

@@ -9,7 +9,7 @@ const CourseCard = ({ title, aurthor, price, category, image }) => {
       <div className="rounded-3xl overflow-hidden">
         <img src={image} alt="" />
       </div>
-      <div className="px-6 py-8 flex flex-col gap-1">
+      <div className="px-3 py-8 flex flex-col gap-1">
         <p className="text-[#7a6ad8]">{aurthor}</p>
         <p className="text-2xl font-semibold">{title}</p>
       </div>

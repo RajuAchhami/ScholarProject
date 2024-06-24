@@ -2,17 +2,18 @@ import React from "react";
 import ServiceCard from "./cards/ServiceCard";
 import { servicesItem, accordianItem } from "./constant/Data";
 import Accordian from "./cards/Accordian";
+import { Link } from "react-scroll";
 
 const Services = () => {
   return (
-    <div className="section pt-44" id="services">
-      <div className=" grid xl:grid-cols-3 md:grid-cols-2  grid-cols-1 place-items-center gap-28 xl:px-20 lg:px-16 md:px-12">
+    <div className="container mx-auto xl:px-20 px-4 pt-36" id="services">
+      <div className="grid  grid-cols-3 max-xl:grid-cols-2 max-md:grid-cols-1 gap-y-24  place-items-center">
         {servicesItem.map((item, i) => {
           return <ServiceCard key={i} {...item} />;
         })}
       </div>
-      <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-4 pt-28">
-        <div className=" bg-[#7a6ad8] rounded-2xl flex flex-col items-center w-full p-6 lg:p-14 space-y-12">
+      <div className="grid lg:grid-cols-2 gap-5 place-items-center pt-24 ">
+        <div className=" bg-[#7a6ad8] px-5 md:px-10 py-12 flex flex-col gap-8 rounded-3xl">
           {accordianItem.map((item, i) => {
             return (
               <Accordian
@@ -24,19 +25,26 @@ const Services = () => {
           })}
         </div>
 
-        <div className="flex flex-col bg-[#F1F0FE] justify-center p-10 md:p-20 gap-6">
+        <div className="flex flex-col justify-center gap-4 px-14 py-10 h-full bg-[#F1F0FE] ">
           <p className="text-[#7a6ad8] font-semibold text-xl">ABOUT US</p>
-          <h1 className="font-semibold text-2xl capitalize">
+          <h1 className="font-semibold text-3xl capitalize">
             What make us the best academy online?
           </h1>
-          <p className="leading-loose">
+          <p className="leading-loose ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
             ipsum suspendisse ultrices gravid risus commodo.
           </p>
           <div>
             <button className="bg-[white] text-[#7a6ad8] font-medium text-sm px-5 py-2 rounded-full cursor-pointer hover:bg-[#7a6ad8] hover:text-white hover:duration-300 ">
-              Discover More
+              <Link
+                className="cursor-pointer"
+                to="home"
+                smooth={true}
+                duration={500}
+              >
+                Discover More
+              </Link>
             </button>
           </div>
         </div>

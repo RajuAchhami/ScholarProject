@@ -27,7 +27,7 @@ const Navbar = () => {
           </h1>
           <form className="hidden relative lg:flex " action="">
             <input
-              className="bg-[#FFFFFF1A] placeholder:text-[#e9e8efbb] placeholder:text-sm rounded-full px-4 py-2 text-white"
+              className="bg-[#ffffff33] placeholder:text-[#e9e8efbb] placeholder:text-sm rounded-full px-4 py-2 text-white"
               type="text"
               placeholder="Type Something"
             />

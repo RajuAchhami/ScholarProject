@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Accordian = ({ accTitle, accDesc }) => {
   const [accordianOpen, setAccordianOpen] = useState(false);
   return (
-    <div className=" bg-white rounded-2xl w-full ">
+    <div className=" bg-white rounded-3xl w-full ">
       <button
         onClick={() => setAccordianOpen(!accordianOpen)}
         className="flex p-4 justify-between w-full items-center"

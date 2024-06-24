@@ -27,7 +27,7 @@ const Courses = () => {
   };
   return (
     <div id="courses">
-      <div className="section py-24 flex flex-col items-center gap-14">
+      <div className="container bg-[#ffffffb0] mx-auto py-24 px-4 xl:px-20 flex flex-col items-center gap-14">
         <div className="flex flex-col gap-4">
           <h1 className="text-center text-[#7a6ad8] font-semibold">
             Latest Courses
@@ -50,7 +50,7 @@ const Courses = () => {
           })}
         </div>
 
-        <div className="grid xl:grid-cols-3 md:grid-cols-2 place-items-center gap-8 lg:gap-14 lg:px-16 xl:px-10">
+        <div className="grid  w-full lg:grid-cols-3 md:grid-cols-2 place-items-center gap-6">
           {data.map((item, i) => {
             return <CourseCard key={i} {...item} />;
           })}

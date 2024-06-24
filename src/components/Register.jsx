@@ -28,11 +28,11 @@ const Register = () => {
   };
   return (
     <div
-      className="flex justify-center items-center relative lg:pt-44 max-lg:pt-28 "
+      className="flex justify-center items-center relative pt-24 lg:pt-28 "
       id="register"
     >
-      <div className="section lg:px-14 grid lg:grid-cols-2 max-lg:gap-10">
-        <div className="flex flex-col gap-6 lg:px-16">
+      <div className="container mx-auto px-4 xl:px-20 lg:px-14 grid lg:grid-cols-2 max-lg:gap-10">
+        <div className="w-full  flex flex-col justify-center gap-6 lg:px-16">
           <h1 className="font-medium text-[#7a6ad8]">CONTACT US</h1>
           <p className="text-3xl font-semibold">
             Feel Free To Contact Us Anytime
@@ -101,7 +101,7 @@ const Register = () => {
           <span className=" text-white">{result}</span>
         </div>
       </div>
-      <div className="max-lg:hidden w-[70vw] absolute -z-10 left-0 ">
+      <div className="max-lg:hidden w-[75vw] absolute -z-10 left-0 ">
         <div className="md:h-[500px] bg-[#F1F0FE] rounded-r-full"></div>
       </div>
     </div>

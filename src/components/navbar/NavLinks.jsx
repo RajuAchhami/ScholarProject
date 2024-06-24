@@ -10,7 +10,7 @@ const NavLinks = ({ href, link }) => {
         spy={true}
         smooth={true}
         duration={500}
-        offset={-10}
+        offset={-20}
       >
         {link}
       </Link>
