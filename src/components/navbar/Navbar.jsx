@@ -4,16 +4,31 @@ import NavLinks from "./NavLinks";
 import { HiMenuAlt1, HiX } from "react-icons/hi";
 import MobileNavLinks from "./MobileNavLinks";
 import { FaSearch } from "react-icons/fa";
+import { baseUrl } from "../constant/Apis";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [sticky, setSticky] = useState(false);
+  const [navItems, setnavItems] = useState([]);
+
+  const getNavs = async () => {
+    const response = await fetch(`${baseUrl}/api/navs`, {
+      method: "GET",
+    });
+    const data = await response.json();
+    console.log(data);
+    setnavItems(data.data);
+  };
+  useEffect(() => {
+    getNavs();
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 20 ? setSticky(true) : setSticky(false);
     });
   }, []);
+
   return (
     <nav
       className={` fixed ${
@@ -38,7 +53,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center">
-          {navLinks.map((navLink, i) => {
+          {navItems.map((navLink, i) => {
             return <NavLinks key={i} {...navLink} />;
           })}
         </div>
@@ -49,7 +64,7 @@ const Navbar = () => {
 
         {toggle && (
           <div className="fixed h-full w-72 top-0 right-0 bg-slate-400 text-white flex flex-col justify-start items-start pl-20 py-20 gap-8 shadow-lg ">
-            {navLinks.map((navLink, i) => {
+            {navItems.map((navLink, i) => {
               return (
                 <MobileNavLinks key={i} {...navLink} setToggle={setToggle} />
               );
