@@ -12,8 +12,8 @@ const Services = () => {
           return <ServiceCard key={i} {...item} />;
         })}
       </div>
-      <div className="grid lg:grid-cols-2 gap-5 place-items-center pt-24 ">
-        <div className=" bg-[#7a6ad8] px-5 md:px-10 py-12 flex flex-col gap-8 rounded-3xl">
+      <div className="grid grid-col-1 lg:grid-cols-2 gap-5 place-items-center mt-24 ">
+        <div className="max-w-full bg-[#7a6ad8] px-4 md:px-10 py-12 flex flex-col gap-8 rounded-3xl">
           {accordianItem.map((item, i) => {
             return (
               <Accordian

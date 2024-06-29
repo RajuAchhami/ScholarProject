@@ -6,21 +6,23 @@ const Accordian = ({ accTitle, accDesc }) => {
     <div className=" bg-white rounded-3xl w-full ">
       <button
         onClick={() => setAccordianOpen(!accordianOpen)}
-        className="flex p-4 justify-between w-full items-center"
+        className="flex p-4 justify-between w-full items-center relative"
       >
         <span
-          className={`font-semibold ${accordianOpen ? "text-[#7a6ad8]" : ""}`}
+          className={`font-semibold max-sm:text-sm ${
+            accordianOpen ? "text-[#7a6ad8]" : ""
+          }`}
         >
           {accTitle}
         </span>
         {accordianOpen ? (
-          <span className="transform rotate-180 duration-300  size-7 text-white rounded-full  bg-[#7a6ad8] content-center">
+          <div className="transform rotate-180 duration-300  size-5 text-white rounded-full  bg-[#7a6ad8] flex justify-center items-center absolute right-5">
             -
-          </span>
+          </div>
         ) : (
-          <span className="transform -rotate-90 duration-300 size-7 text-white rounded-full  bg-[#7a6ad8] content-center">
+          <div className="transform -rotate-90 duration-300 size-5 text-white rounded-full  bg-[#7a6ad8] flex justify-center items-center absolute right-5">
             +
-          </span>
+          </div>
         )}
       </button>
       <div
