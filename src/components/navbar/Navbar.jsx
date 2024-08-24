@@ -53,7 +53,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center">
-          {navItems.map((navLink, i) => {
+          {navLinks.map((navLink, i) => {
             return <NavLinks key={i} {...navLink} />;
           })}
         </div>
@@ -64,7 +64,7 @@ const Navbar = () => {
 
         {toggle && (
           <div className="fixed h-full w-72 top-0 right-0 bg-slate-400 text-white flex flex-col justify-start items-start pl-20 py-20 gap-8 shadow-lg ">
-            {navItems.map((navLink, i) => {
+            {navLinks.map((navLink, i) => {
               return (
                 <MobileNavLinks key={i} {...navLink} setToggle={setToggle} />
               );
